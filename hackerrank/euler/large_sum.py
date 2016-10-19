@@ -1,6 +1,12 @@
-test_cases = int(raw_input())
-s = 0
-for case in xrange(test_cases):
-    s += int(raw_input())
+l = [0] * 5000001
+l[1] = 1
+for i in xrange(2, 5000001):
+    if i % 2 == 0:
+        l[i] = l[i/2] + 1
+    else:
+        print l
 
-print str(s)[:10]
+test_cases = int(raw_input())
+
+for case in xrange(test_cases):
+    n = int(raw_input())
